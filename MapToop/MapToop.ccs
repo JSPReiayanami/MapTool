@@ -1,0 +1,14 @@
+<Solution>
+  <PropertyGroup Name="MapToop" Version="3.10.0.0" Type="CocosStudio" />
+  <SolutionFolder>
+    <Group ctype="ResourceGroup">
+      <RootFolder Name=".">
+        <Image Name="HelloWorld.png" />
+        <Project Name="Interface_MapTool.csd" Type="Layer" />
+        <Project Name="MainScene.csd" Type="Scene" />
+        <Image Name="map001.jpg" />
+        <Project Name="Map1.csd" Type="Layer" />
+      </RootFolder>
+    </Group>
+  </SolutionFolder>
+</Solution>

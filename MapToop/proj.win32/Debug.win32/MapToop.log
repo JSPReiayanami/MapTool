@@ -1,0 +1,62 @@
+﻿生成启动时间为 2016/12/5 15:23:48。
+     1>项目“E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\MapToop.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\audio\include" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\external" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\external\chipmunk\include\chipmunk" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\external\lua\tolua" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\external\lua\lua" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\extensions" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\\" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\extensions\assets-manager" /I..\Classes /I.. /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\editor-support" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\cocos\platform\desktop" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\glfw3\include\win32" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\win32-specific\gles\include\OGLES" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\freetype2" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external\freetype2\include\win32\\" /I"D:\Cocos\Cocos2d-x\cocos2d-x-3.10\cocos\2d\..\..\external" /ZI /nologo /W3 /WX- /MP /Od /Oy- /D WIN32 /D _WINDOWS /D _USE_MATH_DEFINES /D GL_GLEXT_PROTOTYPES /D CC_ENABLE_CHIPMUNK_INTEGRATION=1 /D COCOS2D_DEBUG=1 /D _CRT_SECURE_NO_WARNINGS /D _SCL_SECURE_NO_WARNINGS /D _VARIADIC_MAX=10 /D _USING_V110_SDK71_ /D _UNICODE /D UNICODE /Gm- /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug.win32\\" /Fd"Debug.win32\vc120.pdb" /Gd /TP /wd4267 /wd4251 /wd4244 /analyze- /errorReport:prompt ..\Classes\HelloWorldScene.cpp
+         HelloWorldScene.cpp
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(46): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(55): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(69): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(87): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(101): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\config\head.h(110): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\data\file_data\maptoop\maptoop\classes\entity\gltestinglayer.h(16): warning C4996: 'cocos2d::kmMat4': 被声明为已否决
+                 d:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(1061) : 参见“cocos2d::kmMat4”的声明
+     1>e:\data\file_data\maptoop\maptoop\classes\entity\gltestinglayer.h(14): warning C4996: 'cocos2d::kmMat4': 被声明为已否决
+                 d:\cocos\cocos2d-x\cocos2d-x-3.10\cocos\deprecated\ccdeprecated.h(1061) : 参见“cocos2d::kmMat4”的声明
+     1>e:\data\file_data\maptoop\maptoop\classes\helloworldscene.cpp(42): warning C4172: 返回局部变量或临时变量的地址
+     1>e:\data\file_data\maptoop\maptoop\classes\entity\effect.h(79): warning C4305: “参数”: 从“double”到“float”截断
+     1>e:\data\file_data\maptoop\maptoop\classes\helloworldscene.cpp(223): warning C4305: “参数”: 从“double”到“float”截断
+     1>e:\data\file_data\maptoop\maptoop\classes\helloworldscene.cpp(754): warning C4305: “=”: 从“double”到“float”截断
+     1>e:\data\file_data\maptoop\maptoop\classes\helloworldscene.cpp(1003): warning C4305: “参数”: 从“double”到“float”截断
+       PreLinkEvent:
+         if not exist "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\" mkdir "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\"
+         xcopy /Y /Q "D:\Cocos\Cocos2d-x\cocos2d-x-3.10\prebuilt\win32\*.*" "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\"
+         
+         :VCEnd
+         复制了 60 个文件
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\MapToop.exe" /INCREMENTAL /NOLOGO /LIBPATH:E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\ /LIBPATH:E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\ MathFunctionDll.lib opengl32.lib glew32.lib libzlib.lib libwebp.lib libiconv.lib freetype.lib winmm.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\MapToop.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\MapToop.lib" /MACHINE:X86 /SAFESEH Debug.win32\game.res
+         Debug.win32\AppDelegate.obj
+         Debug.win32\Controller_Point.obj
+         Debug.win32\Astar.obj
+         Debug.win32\Block.obj
+         Debug.win32\Controller_Entity.obj
+         Debug.win32\EffectAnimation.obj
+         Debug.win32\Effect.obj
+         Debug.win32\EffectSprite.obj
+         Debug.win32\GLTestingLayer.obj
+         Debug.win32\MBug.obj
+         Debug.win32\MBugBody.obj
+         Debug.win32\RichTextEntity.obj
+         Debug.win32\Slots.obj
+         Debug.win32\HelloWorldScene.obj
+         Debug.win32\PhysicsScene.obj
+         Debug.win32\MapEditor.obj
+         Debug.win32\StringHelper.obj
+         Debug.win32\TabFileReader.obj
+         Debug.win32\TestToLua.obj
+         Debug.win32\ListView3D.obj
+         Debug.win32\UpdateLayer.obj
+         Debug.win32\main.obj
+         MapToop.vcxproj -> E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\MapToop.exe
+       CustomBuildStep:
+         if not exist "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\" mkdir "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\"
+         xcopy "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\..\Resources" "E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\Debug.win32\" /D /E /I /F /Y
+               
+         :VCEnd
+         复制了 0 个文件
+     1>已完成生成项目“E:\Data\FILE_DATA\MapToop\MapToop\proj.win32\MapToop.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:16.63
