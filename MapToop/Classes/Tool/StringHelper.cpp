@@ -113,6 +113,18 @@ std::string& StringHelper::replace_all_distinct(std::string& str, const std::str
 	return   str;
 }
 
+/*
+@去掉某个点后面的字符返回新的，但是不会改变原本的
+*/
+std::string StringHelper::deleteStrTypeBack(std::string& str, const std::string& type)
+{
+	std::size_t type_pos = str.find(type);
+	if (type_pos != 0 && type_pos < str.length()){
+		return str.substr(0, type_pos);
+	}
+	return str;
+}
+
 using namespace StringHelper;
 SDate::SDate()
 {

@@ -58,6 +58,7 @@ private:
 	Vec2 m_CurPoint;
 	Vec2 m_LastPoint;
 	int  m_CurMapId;
+	string m_CurMapName;
 	int  m_CurType;
 	int  m_CurMapNum;
 	int  m_WdithNum;

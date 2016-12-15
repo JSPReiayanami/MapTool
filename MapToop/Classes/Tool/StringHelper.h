@@ -25,7 +25,10 @@ namespace StringHelper
 	*/
 	std::string& replace_all(std::string& str, const std::string& old_value, const std::string& new_value);
 	std::string& replace_all_distinct(std::string& str, const std::string& old_value, const std::string& new_value);
-
+	/*
+		@去掉某个点后面的字符返回新的，但是不会改变原本的
+	*/
+	std::string deleteStrTypeBack(std::string& str, const std::string& type);
 
 	struct Delta     //日期差结构体
 	{

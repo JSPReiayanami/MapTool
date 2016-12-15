@@ -6,8 +6,8 @@
 #include "Entity/Slots.h"
 #include "Controller/Controller_Point.h"
 #include <fstream>
-#define __MapPngName "Map/Map%d.csb"
-#define __MapDataName "Map/MapData%d.txt"
+#define __MapPngName "Map/%s.csb"
+#define __MapDataName "Map/Data%s.txt"
 #define __splitEAndB "+_)(*&^%$#@!<>?|"
 #define __BlockPosSave "%d,"
 #define __ElementSave "%d,%d,%d#"
@@ -40,7 +40,7 @@ OhterElement::~OhterElement()
 //===]
 MapEditor::MapEditor():
 m_CurMapId(0), m_BlockSize(__BlockSize, __BlockSize), m_MapSize(0, 0), m_MapInt(0, 0),
-m_CurPointBlock(nullptr)
+m_CurPointBlock(nullptr), m_CurMapName("")
 {
 	m_BlockData.clear();
 	m_Element.clear();
@@ -70,15 +70,6 @@ bool MapEditor::init(){
 	InitWidget();
 	InitEvent();
 	ShowChoiceMap();
-// #define  GUID_LEN 64
-// 	char buffer[GUID_LEN] = { 0 };
-// 	GUID guid;
-// 
-// 	if (CoCreateGuid(&guid))
-// 	{
-// 		fprintf(stderr, "create guid error\n");
-// 		return -1;
-// 	}
 	return true;
 }
 
@@ -103,11 +94,12 @@ void MapEditor::CloseChoiceMap()
 void MapEditor::InitCanEditorMapChoice(){
 	int index_count = 1;
 	Size lay_size = Size(m_ListMaps->getContentSize().width,200);
-	while (true)
+	vector<string> allFile;
+	StringHelper::getAllFileInPathWithType("./Map", allFile, "csb");
+	for (auto & mapNa : allFile)
 	{
-		string mapName = StringUtils::format(__MapPngName,index_count);
-		Layout * map_root = (Layout *)CSLoader::createNode(mapName);
-		if (map_root == nullptr) break;
+		Layout * map_root = (Layout *)CSLoader::createNode(StringUtils::format("map/%s", mapNa.c_str()));
+		if (map_root == nullptr) continue;
 		Layout * lay = Layout::create();
 		lay->setContentSize(lay_size);
 		map_root->setScaleX(1 / (map_root->getContentSize().width / lay_size.width));
@@ -115,6 +107,7 @@ void MapEditor::InitCanEditorMapChoice(){
 		
 
 		Button * btn = Button::create("Map/ImageFile.png");
+		btn->setName(StringHelper::deleteStrTypeBack(mapNa,"."));
 		btn->setContentSize(lay_size);
 		btn->setScale9Enabled(true);
 		btn->setPosition(btn->getContentSize() / 2);
@@ -129,7 +122,7 @@ void MapEditor::InitCanEditorMapChoice(){
 }
 void MapEditor::InitEditorMap()
 {
-	Widget * mapBack = (Layout *)CSLoader::createNode(StringUtils::format(__MapPngName, m_CurMapId));
+	Widget * mapBack = (Layout *)CSLoader::createNode(StringUtils::format(__MapPngName,m_CurMapName.c_str()));
 	if (mapBack != nullptr)
 	{
 		m_LayoutBack->addChild(mapBack);
@@ -182,7 +175,7 @@ void MapEditor::LoadMapData()
 	m_BlockData.clear();
 	m_Element.clear();
 	vector<std::string> vect_string;
-	string file_path = StringUtils::format(__MapDataName, m_CurMapId);
+	string file_path = StringUtils::format(__MapDataName, m_CurMapName.c_str());
 	ifstream OpenFile(file_path);
 	if (OpenFile.fail())
 	{
@@ -245,7 +238,7 @@ void MapEditor::LoadMapData()
 }
 void MapEditor::SaveMapData()
 {
-	string file_path = StringUtils::format(__MapDataName, m_CurMapId);
+	string file_path = StringUtils::format(__MapDataName, m_CurMapName.c_str());
 	ofstream myfile(file_path, ios::out);
 	if (!myfile)
 	{
@@ -435,7 +428,7 @@ void MapEditor::ChoiceMapKindButtonEvent(Ref * pSender, ui::Widget::TouchEventTy
 	if (eventType == ui::Widget::TouchEventType::ENDED)
 	{
 		Button * btn = (Button *)pSender;
-		m_CurMapId = btn->getTag();
+		m_CurMapName = btn->getName();
 		CloseChoiceMap();
 		RefreshEditorMap();
 		m_IsCanPoint = true;
